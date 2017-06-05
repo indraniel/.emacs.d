@@ -1,9 +1,8 @@
 # Ensure emacs always runs from this makefile's PWD
-EMACS_FLAGS=--eval '(setq user-emacs-directory default-directory)' -l core/core.el
-EMACS=emacs --batch $(EMACS_FLAGS)
-EMACSI=emacs -q $(EMACS_FLAGS)
-
-MODULES=$(patsubst modules/%, %, $(shell find modules/ -maxdepth 2 -type d))
+EMACS_LIBS=-l core/core.el
+EMACS=/usr/local/bin/emacs --batch --eval '(setq user-emacs-directory default-directory)' $(EMACS_LIBS)
+TEST_EMACS=$(EMACS) --eval '(setq noninteractive nil)' $(EMACS_LIBS)
+TESTS=$(shell find test/ -type f -name 'test-*.el')
 
 all: autoloads autoremove install
 
