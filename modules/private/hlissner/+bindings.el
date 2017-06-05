@@ -48,10 +48,10 @@
  "M-9"    (λ! (+workspace/switch-to 8))
  "M-0"    #'+workspace/switch-to-last
  ;; Basic escape keys for emacs mode
- "C-h"    #'evil-window-left
- "C-j"    #'evil-window-down
- "C-k"    #'evil-window-up
- "C-l"    #'evil-window-right
+ ;"C-h"    #'evil-window-left
+ ;"C-j"    #'evil-window-down
+ ;"C-k"    #'evil-window-up
+ ;"C-l"    #'evil-window-right
  ;; Other sensible, textmate-esque global bindings
  "M-r"    #'+eval/buffer
  "M-R"    #'+eval/region-and-replace
@@ -294,8 +294,12 @@
  :n  "ZX" #'bury-buffer
  :n  "]b" #'doom/next-buffer
  :n  "[b" #'doom/previous-buffer
+ :n  "tt" #'+workspace/new
+ :n  "tc" #'+workspace/delete
  :n  "]w" #'+workspace/switch-right
  :n  "[w" #'+workspace/switch-left
+ :n  "C-l" #'+workspace/switch-right
+ :n  "C-h" #'+workspace/switch-left
  :m  "gt" #'+workspace/switch-right
  :m  "gT" #'+workspace/switch-left
  :m  "gd" #'+jump/definition
