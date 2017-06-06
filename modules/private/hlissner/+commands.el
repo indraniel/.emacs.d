@@ -11,6 +11,7 @@
 (ex! "bc[omp]"      #'+hlissner:byte-compile)
 (ex! "re[load]"     #'doom/reload)
 (ex! "re[load]au"   #'doom/reload-autoloads)
+(ex! "number"       #'nlinum-mode)
 
 ;; Editing
 (ex! "@"            #'+evil:macro-on-all-lines)   ; TODO Test me
