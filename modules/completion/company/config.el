@@ -25,6 +25,7 @@ MODES should be one major-mode symbol or a list of them."
 (def-package! company
   :commands (company-mode global-company-mode company-complete
              company-complete-common company-manual-begin company-grab-line)
+  :demand t
   :config
   (setq company-idle-delay nil
         company-tooltip-limit 10

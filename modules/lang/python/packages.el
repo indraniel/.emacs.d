@@ -3,9 +3,9 @@
 
 ;; requires: python jedi setuptools
 
-(package! anaconda-mode)
+(package! company-jedi)
 (package! nose)
 (package! pip-requirements)
 
 (when (featurep! :completion company)
-  (package! company-anaconda))
+  (package! company-jedi))
